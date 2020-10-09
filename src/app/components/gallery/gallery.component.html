@@ -11,11 +11,11 @@
     </div>
   </div>
 
-  <div *ngIf="category === 'Small Images' || category === 'All'" class="row" style="padding-top: 1em;">
-    <div class="col">
+  <div *ngIf="category === 'Small Images' || category === 'All'" class="row" style="margin-top: 1em;">
+    <div *ngFor="let photo of smalPhotos" class="col">
 
       <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+        <img [src]="photo" class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <div *ngIf="category === 'Middle Images' || category === 'All'" class="row" style="padding-top: 1em;">
+  <div *ngIf="category === 'Middle Images' || category === 'All'" class="row" style="margin-top: 1em;">
     <div class="col">
 
       <div class="card" style="width: 18rem;">
@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <div *ngIf="category === 'Big Images' || category === 'All'" class="row" style="padding-top: 1em;">
+  <div *ngIf="category === 'Big Images' || category === 'All'" class="row" style="margin-top: 1em;">
     <div class="col">
 
       <div class="card" style="width: 18rem;">
