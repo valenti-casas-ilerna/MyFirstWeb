@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
+  category: string = 'all';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeCategory(category: string): void {
+    this.category = category;
   }
 
 }

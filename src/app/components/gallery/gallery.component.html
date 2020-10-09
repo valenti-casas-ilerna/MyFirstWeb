@@ -1,1 +1,51 @@
-<p>gallery works!</p>
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" (click)="changeCategory('left')">Left</button>
+        <button type="button" class="btn btn-secondary" (click)="changeCategory('middle')">Middle</button>
+        <button type="button" class="btn btn-secondary" (click)="changeCategory('right')">Right</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="category === 'left'" class="row" style="padding-top: 1em;">
+    <div class="col">
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/300/200" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="category === 'middle'" class="row" style="padding-top: 1em;">
+    <div class="col">
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/400/200" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="category === 'right'" class="row" style="padding-top: 1em;">
+    <div class="col">
+
+      <div class="card" style="width: 18rem;">
+        <img src="https://picsum.photos/500/200" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
