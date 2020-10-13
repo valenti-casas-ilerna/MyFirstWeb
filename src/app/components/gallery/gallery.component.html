@@ -12,12 +12,12 @@
   </div>
 
   <div *ngIf="category === 'Small Images' || category === 'All'" class="row" style="margin-top: 1em;">
-    <div *ngFor="let photo of smalPhotos" class="col">
+    <div *ngFor="let photo of smallPhotos" class="col">
 
       <div class="card" style="width: 18rem;">
-        <img [src]="photo" class="card-img-top" alt="...">
+        <img [src]="photo.imageURL" class="card-img-top" alt="...">
         <div class="card-body">
-          <p class="card-text">Small Image</p>
+          <p class="card-text">{{photo.description}}</p>
         </div>
       </div>
 
